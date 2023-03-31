@@ -1,0 +1,101 @@
+html {
+  background-color: aliceblue;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  background-color: white;
+}
+
+#portfolio {
+  background-color: white;
+}
+
+.profile-photo {
+  float: left;
+}
+
+.profile-photo img {
+  border-radius: 50%;
+  margin: 10px;
+  border-style: solid;
+  border-color: orange;
+}
+
+.profile-text {
+  padding: 10px;
+  float: left;
+}
+
+.action button {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 13px;
+  padding-left: 13px;
+  border-radius: 12px;
+}
+
+.action button:first-child {
+  background-color: blue;
+  color: white;
+}
+.action button:nth-child(2) {
+  background-color: white;
+  border-color: #14A44D;
+  color: #14A44D;
+}
+
+
+.clearBoth { clear:both; }
+
+
+table tr td{
+  padding: 17px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 20px 12px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 6px;
+}
+
+nav ul li a:hover {
+  background-color: aliceblue;
+}
+
+section {
+  margin: 20px;
+}
+
+form {
+  background-color: white;
+}
+
+form input {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+form input[type="submit"] {
+  margin: 0;
+  background-color: green;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* tambahkan CSS untuk section profile disini */

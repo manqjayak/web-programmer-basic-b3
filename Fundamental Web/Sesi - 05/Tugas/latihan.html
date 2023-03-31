@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan</title>
+</head>
+<body>
+    <label for="pesan">Pesan:</label><input type="text" name="pesan" id="pesan"><br>
+    <label for="kali">Berapa Kali:</label><input type="number" name="kali" id="kali"><br>
+    <button onclick="cetak()">Cetak!</button>
+    <ol id="list"></ol>
+
+    <script>
+        let list = document.getElementById("list")
+    
+        function cetak(){
+            list.innerHTML = "";
+            const pesan = document.getElementById("pesan").value;
+            const kali = document.getElementById("kali").value;
+            for (let i = 0; i < kali; i++) {
+                list.innerHTML = list.innerHTML + "<li>" + pesan +"</li>";
+            }
+            console.log(kali)
+        }
+    </script>
+</body>
+</html>
