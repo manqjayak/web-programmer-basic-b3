@@ -1,0 +1,24 @@
+Sketsa:
+
+1. Nilai yang dimasukkan tidak boleh lebih dari 100 dan kurang dari 0
+2. jika nilai dibawah 100 dan lebih dari sama dengan 80, tampilan "A"
+3. Jika nilai dibawah 80 dan lebih dari sama dengan 70, tampilkan "B" 
+4. Jika nilai dibawah 70 dan lebih dari sama dengan 60, tampilkan "C" 
+10 selain itu tampilkan "data tidak ada"
+
+Logic:
+STORE "nama" WITH "komang"
+STORE "nilai" WITH ANY VALUE 
+STORE "result" WITHOUT ANY VALUE
+IF "nilai" >= 80 AND "nilai" <=100:
+  SET "result WITH "A"
+ELSEIF "nilai" < 80 AND "nilai" >= 70:
+  SET "result WITH "B"
+ELSEIF "nilai" < 70 AND "nilai" >= 60:
+  SET "result" WITH "C"
+ELSE:
+  SET "result" WITH "data tidak ada"
+
+DISPLAY "nama anda" + "nama"
+DISPLAY "nilai anda " + "nilai"
+DISPLAY "huruf mutu " + "result"

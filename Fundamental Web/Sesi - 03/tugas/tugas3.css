@@ -36,6 +36,7 @@ nav {
   padding-right: 13px;
   padding-left: 13px;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .action button:first-child {

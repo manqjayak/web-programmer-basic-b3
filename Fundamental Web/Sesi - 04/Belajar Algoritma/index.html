@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Algoritma</title>
+</head>
+<body>
+  <form action="">
+    <label for="nama">Nama</label>
+    <input type="text" name="nama" id="nama"><br>
+    <label for="nilai">Nilai</label>
+    <input type="number" name="nilai" id="nilai">
+    <input type="button" value="Cek" onclick="calculate()">
+  </form>
+  <div id="hasil"></div>
+
+  <script>
+    function calculate() {
+      let nama = document.getElementById('nama').value 
+      let nilai = document.getElementById('nilai').value
+      let nilaiMutu = '';
+      if (nilai <= 100 && nilai >= 80) {
+        nilaiMutu = "A";
+        
+      } else if(nilai < 80 && nilai >= 70) {
+        nilaiMutu = "B";
+        
+      } else if(nilai < 70 && nilai >= 60) {
+        nilaiMutu = "C";
+        
+      } else {
+        nilaiMutu = "data tidak ada";
+        
+      }
+      
+      document.getElementById('hasil').innerHTML= `
+      Nama Anda ${nama} <br>
+      Nilai Anda ${nilai} <br>
+      Nilai mutu ${nilaiMutu} <br>
+      `;
+    }
+  </script>
+</body>
+</html>
