@@ -19,10 +19,13 @@
             list.innerHTML = "";
             const pesan = document.getElementById("pesan").value;
             const kali = document.getElementById("kali").value;
-            for (let i = 0; i < kali; i++) {
-                list.innerHTML = list.innerHTML + "<li>" + pesan +"</li>";
+            let i = 0;
+            while (i < kali) {
+                console.log(pesan)
+                for ( i = 0; i < kali; i++) {
+                    list.innerHTML = list.innerHTML + "<li>" + pesan +"</li>";
+                }
             }
-            console.log(kali)
         }
     </script>
 </body>

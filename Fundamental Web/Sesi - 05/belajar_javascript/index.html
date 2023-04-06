@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Algoritma</title>
+</head>
+<body>
+  <form action="">
+    <label for="nama">Nama</label>
+    <input type="text" name="nama" id="nama"><br>
+    <label for="nilai">Nilai</label>
+    <input type="number" name="nilai" id="nilai">
+    <input type="button" value="Cek" onclick="calculate()">
+  </form>
+  <div id="result"></div>
+
+  <br><hr><br>
+  <!-- belajar kondisi cek lapar -->
+  <button onclick="cekLapar()">Cek Lapar</button>
+  <p id="hasil"></p>
+  <br><hr><br>
+  <!-- belajar perulangan -->
+  <button onclick="print()">Print 10x</button>
+  <div id="hasil2"></div>
+  <br><hr><br>
+  <!-- belajar perulangan array -->
+  <button onclick="print2()">Print Makanan</button>
+  <ol id="hasil3"></ol>
+  <script>
+    function calculate() {
+      let nama = document.getElementById('nama').value 
+      let nilai = document.getElementById('nilai').value
+      let nilaiMutu = getGrade(nilai) ;
+      /*if (nilai <= 100 && nilai >= 80) {
+        nilaiMutu = "A";
+        
+      } else if(nilai < 80 && nilai >= 70) {
+        nilaiMutu = "B";
+        
+      } else if(nilai < 70 && nilai >= 60) {
+        nilaiMutu = "C";
+        
+      } else {
+        nilaiMutu = "data tidak ada";
+        
+      }*/
+      
+      document.getElementById('result').innerHTML= `
+      Nama Anda ${nama} <br>
+      Nilai Anda ${nilai} <br>
+      Nilai mutu ${nilaiMutu} <br>
+      `;
+    }
+    // Using function
+    function getGrade(nilai) {
+      let nilaiMutu = '';
+      if (nilai <= 100 && nilai >= 80) {
+        nilaiMutu = "A";
+        
+      } else if(nilai < 80 && nilai >= 70) {
+        nilaiMutu = "B";
+        
+      } else if(nilai < 70 && nilai >= 60) {
+        nilaiMutu = "C";
+        
+      } else {
+        nilaiMutu = "data tidak ada";
+        
+      }
+      return nilaiMutu;
+    }
+
+    /////////////////////////////////////////////////
+    //kondisi cek lapar
+    function cekLapar() {
+      let kondisi = "lapar";
+      if (kondisi === "lapar") {
+        //waktu makan
+        hasil = "waktu makan"
+      } else {
+        hasil = "bukan waktu makan"
+      }
+
+      document.getElementById("hasil").innerHTML = hasil
+    }
+    /////////////////////////////////////////////////
+    //perulangan print 10x
+    function print() {
+        let tempat = document.getElementById('hasil2');
+
+        for (let i = 0; i < 10; i++) {
+          tempat.innerHTML = tempat.innerHTML + "<p> Saya sudah belajar for loop!</p>"
+        }
+    }
+    /////////////////////////////////////////////////
+    //perulangan print makanan
+    function print2() {
+        let tempat = document.getElementById('hasil3');
+        let arrayM = ['betutu', 'lawar', 'siobak'];
+        for (let i = 0; i < arrayM.length; i++) {
+          console.log(arrayM[i])
+          tempat.innerHTML = tempat.innerHTML + "<li>"+arrayM[i]+"</li>"
+        }
+    }
+  </script>
+</body>
+</html>
