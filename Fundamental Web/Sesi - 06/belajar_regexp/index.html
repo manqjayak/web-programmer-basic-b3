@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar RegExp</title>
+</head>
+<body>
+  <h1>Hello Regex</h1>
+  <script>
+    let foo = /ab+c/;
+    console.log(foo)
+    console.log(typeof foo)
+
+    let bar = new RegExp("ab+c");
+    console.log(bar)
+    console.log(typeof bar)
+
+    foo = "Belajar JavaScript"
+    let pola = /JavaScript/;
+
+    console.log("type: " + pola.test(foo));
+    console.log("type: " + /Belajar/.test(foo));
+    console.log("type: " + /belajar/.test(foo));
+
+    foo = "1 jam sama dengan 60 menit, juga sama dengan 1600 detik";
+    pola = /\d+/;
+    pola = /\d+/g;
+    console.log(pola.exec(foo))
+    console.log(pola.exec(foo))
+    console.log(pola.exec(foo))
+    console.log(pola.exec(foo))
+
+    foo = "Belajar JavaScript di Hacktiv8 sangat menyenangkan. Yuk ke Hactiv8"
+    console.log(/JavaScript/.test(foo))
+    console.log(/Javascript/.test(foo))
+    console.log(/Belajar/.test(foo))
+    console.log(/belajar/.test(foo))
+    console.log(/Java/.test(foo))
+    console.log(/ajar/.test(foo))
+
+    let hasil = /JavaScript/.exec(foo);
+    console.log(hasil)
+
+
+    pola = /[a-e]../
+    console.log(pola.test('ajbr'))
+  </script>
+</body>
+</html>

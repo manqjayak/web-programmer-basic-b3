@@ -26,8 +26,8 @@
 
     <script>
         let count = 1
-       setInterval(function() {
         let paragraf = document.getElementsByClassName("paragraf")
+        let refresthIntervalId = setInterval(function() {
 
         if (count % 2 == 1) {
             paragraf[0].style.color = "magenta";
@@ -41,6 +41,10 @@
         count ++;
 
        },2000)
+
+       setTimeout(function() {
+        clearInterval(refresthIntervalId)
+       },10000)
     </script>
 
 </body>

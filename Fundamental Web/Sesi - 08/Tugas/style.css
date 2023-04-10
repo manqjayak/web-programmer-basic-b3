@@ -13,6 +13,12 @@ header {
   padding: 30px;
   background-color:rgb(236, 232, 226);
   border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 15px 1px 10px 12px rgb(103, 106, 107);
+}
+
+.cHeader {
+  margin-top: 70px;
 }
 
 header a{
@@ -34,18 +40,40 @@ header img {
 .row {
   display: flex;
   flex-flow: row;
+  margin-bottom: 10px
 }
 
 .item {
-  /* background-color: rgb(241, 239, 239); */
   padding: 20px;
   width: 100%;
   margin: 10px;
-  border-radius: 15px;
+  margin-left: -40px;
+}
+
+.item:first-child {
+  border-right: solid black 2px;
 }
 
 .item:first-child li {
   list-style-type:square;
+}
+
+.start {
+  margin-left: 10px;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s ease-out;
+}
+
+.start2 {
+  margin-top: 0px;
+  -webkit-transition: 1.5s;
+  -moz-transition: 1.5s;
+  -ms-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s ease-out;
 }
 
 h1 {
@@ -54,14 +82,35 @@ h1 {
   text-decoration: underline;
 }
 
+li {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 footer {
-  /* position: fixed; */
+  margin-top:20px;
   bottom: 0;
   right:0;
+  box-sizing: border-box;
   text-align: center;
   padding: 20px;
   background-color: rgb(236, 232, 226);
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+  border-radius: 8px;
+  box-shadow: 5px 1px 10px 12px rgb(103, 106, 107);
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  .row {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+  
 }

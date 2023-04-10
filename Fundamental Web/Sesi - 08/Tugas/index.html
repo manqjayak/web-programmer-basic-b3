@@ -10,8 +10,10 @@
 <body>
   <header>
     <img src="images/foto.png" alt="foto profile" width="140px" height="160">
-    <h2>I Komang Hendra Trinium Jaya</h2>
-    <p>Lulusan s1 Teknik Informatika spesialis di Digital Image Processing. Memiliki pengalaman mengembangkan pengklasifikasian terhadapat gerak tari Bali</p>
+    <div class="cHeader">
+      <h2>I Komang Hendra Trinium Jaya</h2>
+      <p>Lulusan s1 Teknik Informatika spesialis di Digital Image Processing. Memiliki pengalaman mengembangkan pengklasifikasian terhadapat gerak tari Bali</p>
+    </div>
     <br>
     <a href="https://www.linkedin.com/in/manqjayak" target="_blank">LinkedIn</a>
   </header>
@@ -28,11 +30,7 @@
       </div>
       <div class="item">
         <h1>Riwayat Pendidikan</h1>
-        <ul>
-          <li>SD Negeri 3 Tuban</li>
-          <li>SMP Negeri 1 Kuta Selatan</li>
-          <li>SMA Negeri 1 Kuta</li>
-          <li>Univeritas Pendidikan Ganesha</li>
+        <ul id = 'riwayatPendidikan'>
         </ul>
       </div>
     </div>
@@ -79,5 +77,24 @@
   <footer>
     copyright 2023
   </footer>
+  <script>
+    let itemVis = document.querySelectorAll('.item');
+    for (let i = 0; i < itemVis.length; i++) {
+      itemVis[i].classList.add('start')
+    }
+    let itemHeader = document.querySelector('.cHeader')
+    itemHeader.classList.add('start2')
+
+
+    let pendidikan = ['SD Negeri 3 Tuban',
+    'SMP Negeri 1 Kuta Selatan',
+    'SMA Negeri 1 Kuta',
+    'Universitas Pendidikan Ganesha'];
+    let rPendidikan = document.getElementById("riwayatPendidikan");
+    for (let i = 0; i < pendidikan.length; i++) {
+      rPendidikan.innerHTML = rPendidikan.innerHTML + `<li> ${pendidikan[i]} </li>`;
+      
+    }
+  </script>
 </body>
 </html>

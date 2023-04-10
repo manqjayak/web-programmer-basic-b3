@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar DOM 2</title>
+
+</head>
+<body>
+  <p id="title">Selamat Datang di DOM !</p>
+  <h1>Hello Words</h1>
+  <h2 id="judul2" style="color:blue">Delete saya</h2>
+  
+  <hr>
+
+  <h1>Aplikasi Ubah Warna</h1>
+  <label for="color">Warna Latar:</label>
+  <input type="color" name="color" id="bg-color">
+  <br>
+  <label for="textColor">Warna Teks</label>
+  <input type="color" id="text-color">
+  <br>
+  <br>
+
+
+  <script>
+    document.write("Hello World YAL");
+    document.write("<br>");
+    document.write("<h2>Saya Sedang Belajar DOM</h2>");
+    // mengakses objek head
+    document.head;
+    // mengakses objek body
+    document.body;
+    // melihat jumlah huruf di judul pada objek title
+    document.title.length;
+    let hLength = document.getElementsByTagName('h1')[0].innerHTML.length;
+    console.log("panjang H1 adalah: "+hLength)
+    //create element
+    //tag p
+    let pContent = document.createElement("p");
+    pContent.textContent = "Belajar Savascript Menggunakan Tag P"
+    // tag h1
+    let judul = document.createElement("h1");
+    judul.textContent = "Belajar Javascript DOM"
+
+    document.body.append(pContent);
+    document.body.append(judul);
+
+    // Memilih element berdasarkan ID
+    let judul2 = document.getElementById('judul2')
+    judul2.remove();
+    console.log("Element's Deleted");
+    console.log(judul2)
+    
+    // Mengubah warna Latar
+    let bgColor = document.getElementById('bg-color');
+    bgColor.addEventListener("change", (event) => {
+      console.log(event.target.value)
+      document.body.style.backgroundColor = event.target.value
+    })
+    
+    let textColor = document.getElementById('text-color')
+    textColor.addEventListener("change", (event) => {
+      console.log(event.target.value)
+      document.body.style.color = event.target.value
+    })
+  </script>
+</body>
+</html>
